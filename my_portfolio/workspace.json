@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "my_portfolio": {
+      "architect": {
+        "build": {
+          "options": {
+            "styles": ["src/styles.scss"]
+          }
+        }
+      }
+    }
+  }
+}
