@@ -1,1 +1,130 @@
-<p>about works!</p>
+<section id="about" class="about section">
+  <div class="container">
+    <div class="about-wrapper">
+      <!-- Section principale -->
+      <div class="about-content">
+        <div class="about-text">
+          <h2 class="section-title">À propos de moi</h2>
+          <p class="intro-text">
+            Étudiant ingénieur en informatique à Polytech Nice-Sophia, je suis passionné par le développement logiciel 
+            et la création d'applications innovantes. Spécialisé en Java, Angular et technologies web modernes, 
+            je recherche un <strong>contrat d'apprentissage de 2 ans</strong> dès septembre 2025.
+          </p>
+          
+          <!-- Timeline d'expérience -->
+          <div class="timeline">
+            <h3>Parcours Académique & Projets</h3>
+            <div class="timeline-items">
+              <div class="timeline-item" *ngFor="let experience of experiences">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>{{ experience.title }}</h4>
+                  <p class="company">{{ experience.company }}</p>
+                  <span class="period">{{ experience.period }}</span>
+                  <p class="description">{{ experience.description }}</p>
+                  <div class="tech-used" *ngIf="experience.technologies">
+                    <span class="tech-mini" *ngFor="let tech of experience.technologies">{{ tech }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <div class="profile-card">
+            <div class="profile-image">
+              <img src="assets/hamid-profile.jpg" alt="Hamid AMEDIAZ" />
+              <div class="image-overlay">
+                <div class="social-links">
+                  <a href="https://github.com/AMEDIAZ_HAMID_IT" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://linkedin.com/in/AMEDIAZ-HAMID" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:amediazhamid736@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="profile-info">
+              <h3>{{ name }}</h3>
+              <p class="role">{{ role }}</p>
+              <p class="location">📍 Nice (06200)</p>
+              <div class="apprentissage-badge">
+                <span class="badge-text">Recherche Apprentissage</span>
+                <span class="badge-date">Sept. 2025 - 2 ans</span>
+              </div>
+              
+              <div class="stats">
+                <div class="stat-item">
+                  <span class="stat-number">{{ projectsCount }}+</span>
+                  <span class="stat-label">Projets</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">{{ studyYears }}</span>
+                  <span class="stat-label">Années d'études</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">{{ languagesCount }}</span>
+                  <span class="stat-label">Langues</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section compétences adaptée au CV -->
+      <div class="skills-section">
+        <h3>Compétences & Technologies</h3>
+        <div class="skills-categories">
+          <div class="skill-category" *ngFor="let category of skillCategories">
+            <h4>{{ category.name }}</h4>
+            <div class="skills-grid">
+              <div class="skill-item" *ngFor="let skill of category.skills">
+                <div class="skill-icon">
+                  <i [class]="skill.icon"></i>
+                </div>
+                <span class="skill-name">{{ skill.name }}</span>
+                <div class="skill-progress">
+                  <div class="progress-bar" [style.width.%]="skill.level"></div>
+                </div>
+                <span class="skill-level">{{ skill.level }}%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section atouts -->
+      <div class="values-section">
+        <h3>Mes Atouts</h3>
+        <div class="values-grid">
+          <div class="value-card" *ngFor="let value of values">
+            <div class="value-icon">{{ value.icon }}</div>
+            <h4>{{ value.title }}</h4>
+            <p>{{ value.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section langues -->
+      <div class="languages-section">
+        <h3>Langues</h3>
+        <div class="languages-grid">
+          <div class="language-item" *ngFor="let lang of languages">
+            <div class="language-flag">{{ lang.flag }}</div>
+            <div class="language-info">
+              <h4>{{ lang.name }}</h4>
+              <div class="language-level">{{ lang.level }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
