@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faJava, faAngular, faJs, faPython, faBootstrap, faGithubAlt, faDocker } from '@fortawesome/free-brands-svg-icons';
-import { faCode, faLeaf, faDatabase, faWrench, faFlask, faMagnifyingGlass, faDesktop } from '@fortawesome/free-solid-svg-icons';
+import { faJava, faAngular, faJs, faPython, faBootstrap, faGithubAlt, faDocker, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faCode, faLeaf, faDatabase, faWrench, faFlask, faMagnifyingGlass, faDesktop, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 interface Experience {
   title: string;
@@ -50,7 +50,8 @@ export class AboutComponent {
     // Ajout des icônes à la bibliothèque
     library.addIcons(
       faJava, faAngular, faJs, faPython, faBootstrap, faGithubAlt, faDocker,
-      faCode, faLeaf, faDatabase, faWrench, faFlask, faMagnifyingGlass, faDesktop
+      faCode, faLeaf, faDatabase, faWrench, faFlask, faMagnifyingGlass, faDesktop,
+      faGithub, faLinkedin, faEnvelope
     );
   }
 

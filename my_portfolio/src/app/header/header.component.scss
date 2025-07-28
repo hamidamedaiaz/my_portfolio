@@ -1,120 +1,30 @@
-@use '../../../src/styles.scss' as *;
-
-.header {
-  background: $white;
-  box-shadow: 0 2px 20px rgba($dark-color, 0.1);
+.sidebar {
   position: fixed;
-  width: 100%;
   top: 0;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: #1f2937; /* bleu foncé / gris foncé */
+  color: white;
+  padding: 2rem 1rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  @include transition();
+}
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: $spacing-sm 0;
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
-    .logo {
-      h2 {
-        color: $primary-color;
-        font-weight: $font-weight-bold;
-        font-size: 1.8rem;
-        @include transition();
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
 
-        &:hover {
-          transform: scale(1.05);
-        }
-      }
-    }
-
-    .nav-menu {
-      display: flex;
-      list-style: none;
-      gap: $spacing-lg;
-
-      li {
-        a {
-          text-decoration: none;
-          color: $dark-color;
-          font-weight: $font-weight-semibold;
-          position: relative;
-          @include transition();
-
-          &:hover {
-            color: $primary-color;
-          }
-
-          // Effet underline animé
-          &::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: $primary-color;
-            @include transition(width);
-          }
-
-          &:hover::after {
-            width: 100%;
-          }
-        }
-      }
-
-      @include media-query(tablet) {
-        flex-direction: column;
-        gap: $spacing-sm;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: $white;
-        box-shadow: 0 5px 15px rgba($dark-color, 0.1);
-        padding: $spacing-md;
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        @include transition();
-
-        &.active {
-          transform: translateY(0);
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-    }
-
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      padding: $spacing-xs;
-
-      span {
-        width: 25px;
-        height: 3px;
-        background: $dark-color;
-        margin: 3px 0;
-        @include transition();
-      }
-
-      &.active span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-      }
-
-      &.active span:nth-child(2) {
-        opacity: 0;
-      }
-
-      &.active span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-      }
-
-      @include media-query(tablet) {
-        display: flex;
-      }
-    }
-  }
+.nav-links a:hover {
+  color: #38bdf8;
+  text-decoration: underline;
 }
