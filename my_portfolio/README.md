@@ -1,59 +1,137 @@
-# MyPortfolio
+# Portfolio Personnel - Hamid AMEDIAZ
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+## 📋 Description
 
-## Development server
+Portfolio personnel développé avec Angular 19, présentant mon parcours d'étudiant ingénieur informatique, mes compétences techniques et mes projets réalisés.
 
-To start a local development server, run:
+## 🚀 Technologies utilisées
+
+- **Framework** : Angular 19.2.3
+- **Styling** : SCSS avec design responsive
+- **Icônes** : FontAwesome
+- **Typography** : Google Fonts (Poppins)
+- **Outils** : Angular CLI, TypeScript
+
+## 📦 Installation
+
+### Prérequis
+- Node.js (version 18 ou supérieure)
+- npm ou yarn
+- Angular CLI (`npm install -g @angular/cli`)
+
+### Installation des dépendances
+
+```bash
+# Cloner le projet
+git clone [URL_DU_REPO]
+cd my_portfolio
+
+# Installer les dépendances
+npm install
+
+# Installer FontAwesome
+npm install @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
+```
+
+## 🛠️ Développement
+
+### Serveur de développement
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Accédez à `http://localhost:4200/` dans votre navigateur. L'application se rechargera automatiquement lors des modifications.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### Build de production
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Les fichiers de build seront générés dans le dossier `dist/`.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Tests
 
 ```bash
+# Tests unitaires
 ng test
-```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
+# Tests end-to-end
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📱 Structure du projet
 
-## Additional Resources
+```
+src/
+├── app/
+│   ├── about/              # Composant À propos
+│   ├── contact/            # Composant Contact  
+│   ├── footer/             # Composant Footer
+│   ├── projects/           # Composant Projets
+│   ├── sidebar/            # Composant Navigation
+│   ├── app.component.*     # Composant principal
+│   └── app.config.ts       # Configuration Angular
+├── assets/                 # Ressources statiques
+├── styles.scss            # Styles globaux
+└── index.html             # Page principale
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🎨 Fonctionnalités
+
+### Sections principales
+
+- **About** : Présentation personnelle, compétences, expériences et valeurs
+- **Projects** : Showcase des projets réalisés
+- **Contact** : Informations de contact et formulaire
+- **Navigation** : Sidebar responsive avec navigation fluide
+
+### Design responsive
+
+- **Desktop** : Layout avec sidebar fixe (300px)
+- **Tablet** : Adaptation de la sidebar (280px)
+- **Mobile** : Navigation mobile avec overlay
+
+
+## 📊 Compétences mises en avant
+
+### Langages & Frameworks
+- Java (90%)
+- Angular (85%)
+- JavaScript (85%)
+- Python (75%)
+- Spring Boot (80%)
+
+### Web & Frontend
+- HTML/CSS/SCSS (90-95%)
+- Bootstrap (85%)
+- JavaFX (80%)
+
+### Base de données & Outils
+- PostgreSQL (85%)
+- Git/GitHub (90%)
+- Docker (75%)
+- Maven (85%)
+
+## 🎓 Formation
+
+- **2024-2027** : Diplôme d'Ingénieur d'État en Informatique - Polytech Nice-Sophia
+- **2023-2024** : Licence 3 Informatique - Université Claude Bernard Lyon 1
+- **2022-2023** : Licence 2 Mathématiques - Université d'Orléans
+
+## 📞 Contact
+
+- **Nom** : Hamid AMEDIAZ  
+- **Rôle** : Étudiant Ingénieur Informatique
+- **Formation** : Polytech Nice-Sophia
+
+## 🚧 Développements futurs
+
+- [ ] Finaliser le composant Projects avec showcase des projets
+- [ ] Implémenter le formulaire de contact fonctionnel
+- [ ] Ajouter des animations et transitions avancées
+- [ ] Intégrer un système de thèmes (clair/sombre)
+- [ ] Optimiser les performances et l'accessibilité
+
+*Développé avec ❤️ par Hamid AMEDIAZ*
